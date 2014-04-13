@@ -1,0 +1,58 @@
+\section{Aufbau der Textdateien}
+\label{aufbau_der_textdateien}
+
+Die einzelnen Textdateien werden mit zweistelligen Nummern, 
+die sich am Anfang des Dateinamens befinden,
+durchnummeriert.
+Die Stellen 00 - 09 und 90 - 99 dienen dabei als Steuerdateien 
+und können nicht verwendet werden.
+Die erste Nummer die verwendet werden kann ist somit die 10.
+Der \verb!cat *.tex! Befehl, 
+dem man in der \verb!makefile! Datei findet, 
+stellt dabei sicher dass die Dateien in der richtigen 
+Reihenfolge zusammengebaut werden.
+
+
+
+\subsection{Beispiel dieses Dokuments}
+
+Dieses Dokument besteht aus folgenden Dateien erstellt.
+
+\begin{itemize}
+	\item 00-start.tex
+	\item 08-titel.tex
+	\item 09-abstract.tex
+	\item 10-beschreibung.tex
+	\item 20-voraussetzung.tex
+	\item 30-installation.tex
+	\item 40-aufbau-der-textdateien.tex
+	\item 50-anmerkung.tex
+	\item 99-ende.tex
+	\item makefile
+	\item pdfname
+\end{itemize}
+
+
+\subsection{Ein- Ausschalten von Textteilen}
+\label{sec:ein_ausschalten_von_textteilen}
+
+Will man Textteile ausschalten, zum Beispiel das Anzeigen
+des Inhaltsverzeichnisses, so muss man die entsprechende Datei
+nur umbenannt werden.
+Durch die, unter Linux, automatische Dateinamen Vervollständigung%
+\footnote{Diese erreicht man durch drücken der \texttt{TAB} Taste}
+bietet sich das ändern des Datei Suffixes an.
+
+\textbf{Beispiel:} Will man die Anzeige des Inhaltsverzeichnisses ausschalten,
+so benennt man die Datei 
+\texttt{07-tableof\-contents\-.tex} in \texttt{07-tableof\-contents\-.texx}
+um.
+
+\begin{verbatim}
+mv 07-tableofcontents.tex 07-tableofcontents.texx
+\end{verbatim}
+
+Nach einem \verb!make! wird das Inhaltsverzeichnis nicht mehr angezeigt.
+
+
+
