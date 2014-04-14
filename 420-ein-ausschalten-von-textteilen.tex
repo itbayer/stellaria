@@ -1,0 +1,23 @@
+\subsection{Ein- Ausschalten von Textteilen}
+\label{sec:ein_ausschalten_von_textteilen}
+
+Will man Textteile ausschalten, zum Beispiel das Anzeigen
+des Inhaltsverzeichnisses, so muss man die entsprechende Datei
+nur umbenannt werden.
+Durch die, unter Linux, automatische Dateinamen Vervollständigung%
+\footnote{Diese erreicht man durch drücken der \texttt{TAB} Taste}
+bietet sich das ändern des Datei Suffixes an.
+
+\textbf{Beispiel:} Will man die Anzeige des Inhaltsverzeichnisses ausschalten,
+so benennt man die Datei 
+\texttt{07-tableof\-contents\-.tex} in \texttt{07-tableof\-contents\-.texx}
+um.
+
+\begin{verbatim}
+mv 07-tableofcontents.tex 07-tableofcontents.texx
+\end{verbatim}
+
+Nach einem \verb!make! wird das Inhaltsverzeichnis nicht mehr angezeigt.
+
+
+
